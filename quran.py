@@ -965,9 +965,9 @@ data = """
 lines = data.strip().split("\n")
 
 # تحويل كل سطر إلى قائمة فرعية بعد التحقق من صحة عدد الأعمدة
-questions_list = [line.strip().split(",") for line in lines if len(line.strip().split(",")) == 3]
+questions_list = [line.strip().split(",") for line in lines if len(line.strip().split(",")) == 4]
 # تعريف أسماء الأعمدة
-columns = ["السؤال", "الإجابة", "النقاط"]
+columns = ["السؤال", "الإجابة", "التصنيف", "النقاط"]
 
 # تحويل القائمة إلى DataFrame
 df = pd.DataFrame(questions_list, columns=columns)
