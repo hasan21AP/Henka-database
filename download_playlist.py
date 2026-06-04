@@ -1,6 +1,6 @@
 from yt_dlp import YoutubeDL
 
-playlist_url = "https://www.youtube.com/watch?v=bq7caidfUts&list=PLEg3i7iSb5v_fMWkrvFODmUpSY7rhjsA_&index=53"
+playlist_url = "https://www.youtube.com/playlist?list=PLic3kGSVdYqPmFLmVrENaLoqW1RGKb3eE"
 
 ydl_opts = {
     "outtmpl": "downloads/%(playlist_title)s/%(playlist_index)02d - %(title).120s.%(ext)s",

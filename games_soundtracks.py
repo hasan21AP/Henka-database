@@ -4,14 +4,14 @@ import pandas as pd
 import re
 
 # 🔹 المسار المحلي
-folder_path = r"G:\Visual_Studio_Work_Place\Python Projects\downloads\My TOP 150 - Video Game Soundtracks"
+folder_path = r"G:\Visual_Studio_Work_Place\Python Projects\downloads\Games sound track"
 
 # 🔹 بيانات Firebase
 bucket = "henka-game.firebasestorage.app"
 firebase_folder = "games_soundtracks"
 
 # ⚠️ نفس التوكن (لو كلهن نفس الشيء)
-token = "df88f66d-7d2c-4665-934e-f275cea1b91e"
+token = "757b0393-7e7a-4a87-b81b-86630005b093"
 
 rows = []
 
@@ -38,7 +38,7 @@ for file in os.listdir(folder_path):
             "السؤال": "في اي لعبة هذه الموسيقى؟",
             "الإجابة": answer,
             "الميديا": url,
-            "النقاط": 100
+            "النقاط": 250
         })
 
 # 🔹 تحويل إلى Excel
