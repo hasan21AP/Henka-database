@@ -3,7 +3,7 @@ import yt_dlp
 
 playlist_url = input("Enter playlist URL: ").strip()
 
-download_folder = "downloads/True Detective"
+download_folder = "downloads/Rezero"
 os.makedirs(download_folder, exist_ok=True)
 
 ydl_opts = {

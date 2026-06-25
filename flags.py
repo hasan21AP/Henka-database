@@ -4,19 +4,19 @@ import pandas as pd
 import re
 
 # 🔹 المسار المحلي
-folder_path = r"G:\Visual_Studio_Work_Place\Python Projects\Football Goals3"
+folder_path = r"G:\Visual_Studio_Work_Place\Python Projects\flags"
 
 # 🔹 بيانات Firebase
 bucket = "henka-game.firebasestorage.app"
-firebase_folder = "football_goals"
+firebase_folder = "flags"
 
 # ⚠️ نفس التوكن (لو كلهن نفس الشيء)
-token = "f7d8623e-08bc-41e6-81db-0b177cccebe1"
+token = "20c9520e-0983-4ec3-9c08-209ef6904048"
 
 rows = []
 
 for file in os.listdir(folder_path):
-    if file.endswith(".mp4"):
+    if file.endswith(".png"):
         file_name = file.strip()
 
         # 🔹 المسار داخل Firebase
@@ -29,20 +29,20 @@ for file in os.listdir(folder_path):
         url = f"https://firebasestorage.googleapis.com/v0/b/{bucket}/o/{encoded_path}?alt=media&token={token}"
 
         # حذف الامتداد
-        name = file_name.replace(".mp4", "")
+        name = file_name.replace(".png", "")
 
 # حذف الرقم + المسافة + الشرطة من البداية
         answer = re.sub(r"^\d+\s*-\s*", "", name)
 
         rows.append({
-            "السؤال": "خمن الهداف وفي أي مباراة كان الهدف؟!",
+            "السؤال": "ما هي الدولة؟",
             "الإجابة": answer,
             "الميديا": url,
-            "النقاط": 300
+            "النقاط": 100
         })
 
 # 🔹 تحويل إلى Excel
 df = pd.DataFrame(rows)
-df.to_excel("football_goals_questions3.xlsx", index=False)
+df.to_excel("flags_questions.xlsx", index=False)
 
 print("Done ✅")
